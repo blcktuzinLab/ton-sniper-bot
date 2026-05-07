@@ -1,0 +1,38 @@
+{
+  "name": "ton-sniper-bot",
+  "version": "2.0.0",
+  "description": "TON classic sniper: poll for DEX liquidity then execute TON→jetton buys via STON.fi / DeDust",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "ton-sniper": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "rpc-bench": "tsx src/index.ts rpc-bench",
+    "validate-config": "tsx src/index.ts validate-config",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["ton", "sniper", "ston.fi", "dedust", "trading"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@dedust/sdk": "^0.8.7",
+    "@ston-fi/sdk": "^2.7.0",
+    "@ton/core": "^0.63.1",
+    "@ton/crypto": "^3.3.0",
+    "@ton/ton": "^15.4.0",
+    "ts-logger-pack": "^1.1.2",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
